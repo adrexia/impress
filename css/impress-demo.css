@@ -30,7 +30,7 @@
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
+a, abbr, acronym, address, big, cite, code, 
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
@@ -86,7 +86,7 @@ body {
     min-height: 740px;
     
     background: rgb(215, 215, 215);
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 250)));
     background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
     background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
     background:     -ms-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
@@ -268,7 +268,7 @@ a:focus {
 }
 
 #title h1 {
-    font-size: 190px;
+    font-size: 4em;
     
     -webkit-transform: translateZ(50px);
     -moz-transform:    translateZ(50px);
@@ -287,7 +287,7 @@ a:focus {
     
     Let's move to 'big thoughts' with centered text and custom font sizes.
 */
-#big {
+#big, .big {
     width: 600px;
     text-align: center;
     font-size: 60px;
@@ -308,9 +308,18 @@ a:focus {
 /*
     'Tiny ideas' just need some tiny styling.
 */
-#tiny {
-    width: 500px;
+#tiny, .tiny {
     text-align: center;
+}
+
+.small{
+    font-size:0.6em;
+    line-height:1.2em;
+    margin-bottom:25px;
+}
+
+.center{
+    text-align:center;
 }
 
 /*
@@ -435,7 +444,7 @@ a:focus {
     
     Quite a simple idea, but lot's of styles and prefixes.
 */
-#its-in-3d span,
+
 #its-in-3d b {
     display: inline-block;
     -webkit-transform: translateZ(40px);
@@ -459,13 +468,7 @@ a:focus {
     transform:         translateZ(-40px);
 }
 
-#its-in-3d .you {
-    -webkit-transform: translateZ(20px);
-    -moz-transform:    translateZ(20px);
-    -ms-transform:     translateZ(20px);
-    -o-transform:      translateZ(20px);
-    transform:         translateZ(20px);
-}
+
 
 #its-in-3d .noticed {
     -webkit-transform: translateZ(-40px);
@@ -501,7 +504,7 @@ a:focus {
     transform:         translateZ(-10px);
 }
 
-#its-in-3d.present span,
+
 #its-in-3d.present b {
     -webkit-transform: translateZ(0px);
     -moz-transform:    translateZ(0px);
@@ -525,6 +528,47 @@ a:focus {
 .impress-on-overview .step {
     opacity: 1;
     cursor: pointer;
+}
+
+.center{
+    text-align:center;
+}
+
+code{
+    display:block;
+    font-size:0.5em !important;
+    border:2px solid #ddd;
+    background-color:#333;
+    color:#fff;
+    padding:20px;
+    -webkit-font-smoothing:auto;
+    margin:10px 0;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-background-clip: padding-box;
+    background-clip:padding-box;
+    font-family: Monaco,"DejaVu Sans Mono","Courier New",monospace;
+    -webkit-border-radius: 10px;    
+    border-radius: 10px;
+}
+
+code span{
+    color:#ccc;
+    display:block !important;
+    margin-top:15px;
+}
+
+code em{
+    color:#F9FE64;
+}
+
+code strong{
+    color:#CC0E2E;
+}
+
+.slide code{
+    line-height:1.5em;
+    font-size:22px !important;
 }
 
 
